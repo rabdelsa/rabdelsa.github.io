@@ -1,0 +1,21 @@
+h2, h3 {
+	text-align: center;
+}
+
+img {
+	float: left;
+    	height: 10%;
+   	width: 10%;
+	border: 0px solid #ffb6c1;
+}
+
+
+aside {
+	float: right;
+}
+
+button {
+	background-color: #0000ff;
+	color: #ffffff;
+	border-radius: 8px;
+	
