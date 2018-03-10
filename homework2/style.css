@@ -19,11 +19,6 @@
 		line-height:21px; /* line height sets the vertical spacing between lines of text. */
 	}
 		
-
-
-	
-
-
 	div#header{
 		background-color:#333; /* a more specific way to set a background color */
 		background-image:url(images/headerbkgd.png); /* sets a background image in the header and the position it should sit */
@@ -42,10 +37,7 @@
 		width: 90.625%;	/* sets the width of the div to 900px. Remember that if you add padding to this element it will increase the size by the number of pixels in the padding. In this example the width is 900px and we have 15px to the left and right so the total width of the header will be (870px + 15px+15px=930px */
 		
 				}
-
-
-
-		
+	
 	ul.navigation {
 		list-style:none;	/* this removes the bullets from list elements */
 		margin-top:20px;	/* giving the ul a top margin of 20px */
@@ -55,10 +47,7 @@
 		display:inline-block; /* an inline block element can have width and height applied to it / and if not, they only take up as much space as the content within allows */
 		margin:0 3px 5px;	/* this code adds a 3px margin to the left and right of the list elements, and 5px to the bottom of the list elements */
 					}
-
-
-
-				
+			
 	ul.navigation li a{
 		background:#4a4a4a;	/* this is a dark grey background for the link */
 		color:#fff;	/* this makes the link text white */
@@ -69,7 +58,6 @@
 		padding:3px 10px;	/* as the name implies, this adds extra padding around the link, so that the borders don't bump up against the link text */
 		text-decoration:none; /* this removes the normal underline that links usually have */
 	}
-
 						
 	ul.navigation li a:hover{
 		background-color:#000; /*this is a hover pseudo class.  By designating a different background color, than the class for the a tag above, when a mouse hovers over these particular links, in the navigation bar, the background color will change to what's defined here */
@@ -86,11 +74,6 @@
 		float:right;
 		width:68.75%;
 		}
-		
-
-
-
-
 
 	div.sidebar-left{
 		float:left;
@@ -101,37 +84,25 @@
 	div.sidebar-left a{
 		color:#445e64;	/* this redefines all links in the left sidebar to this new color, as opposed to the default blue link color */
 	}		
-
-
-
-
-
 	
 	div.sidebar-left a:hover{
 		text-decoration:none
 	}	/* when hovering over a link, in the sidebar, this turns off the underline */
 	
-
-
-
-
-
-
 	.list{
 		border-bottom:1px solid #c3dce1; /* adds a border to the bottom of the list to further divide the content for eaier segragation */
 		padding:0 0 20px 15px;	/* adds spacing to the bottom of the list to further divide the content for eaier segragation */
 	}
+
 	.list li{
 		margin-bottom:10px
 	}
+
 	.list li a{
 		font-weight:bold;	/* this makes all anchor classes with .list bold without using <strong>  */
 		text-transform:uppercase;	/* this makes all anchor classes with .list uppercase  */
 		font-size:11px;	/* this makes all anchor classes with .list applied 11px tall  */
 	}
-	
-
-
 			
 	div#footer{
 		background-color:#c4d5d9;
@@ -139,22 +110,31 @@
 		padding:15px;
 		text-align:center;
 		width:93.75%;
+            	transition:all .78s ease;
+
 	}
 
+	div#footer:hover {
+        	background-color: #FFB6C1;
+	}
 
 	.float-left{
 		float:left;	/* use this on an element (like an image) to make it float to the left of it's containing HTML element */
 		margin:0  10px 10px 0;
 	}
+
 	.float-right{
 		float:right;	/* use this on an element (like an image) to make it float to the right of it's containing HTML element */
 	}
+
 	.float-right img{
 		margin:0 0 10px 10px;	/* use this on an element (like an image) to make it float to the right of it's containing HTML element */
 	}
+
 	.clear{
 		clear:both; /* this clears floats.  This would be used to cancel out a float's behavior on content below it.  */
 	}
+
 
 
 
