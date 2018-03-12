@@ -136,16 +136,14 @@
 	}
 
 
-
-
 @media screen and (min-width:481px) {
-body, .header, .navigation, .footer 
+body, .header, .navigation, .footer  {width: 100%;}
 }
-
 
 @media screen and (max-width:480px) {
 body, .header, .footer, .navigation {width:100%;}
 .column {margin: 10px 0; border-bottom:1px dashed #7b96bc;}
-.navigation ul li {width: 33.33334375%;}
-#sidebar-left, #col-right {width:100%;}  
+.navigation ul li {width: 33.33334375%;}  
+#sidebar-left, #col-right  {width:100%;}
 }
+
