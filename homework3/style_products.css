@@ -45,12 +45,7 @@ img {
     float: left;
 }
 
-@media screen and (min-width:481px) {
-body {width: 100%;}
-}
-
-@media screen and (max-width:480px) {
-body {width:100%;} 
-#accordion{width:100%;}
+@media screen {
+width: 100%;
 }
 
