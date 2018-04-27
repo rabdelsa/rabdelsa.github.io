@@ -4,6 +4,13 @@ ul {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+
+}
+
+.navbar {
+    position: fixed;
+    top: 0;;
+    width: 100%;
 }
 
 li {
@@ -62,13 +69,7 @@ p {
 }
 
 
-@media screen and (min-width:481px) {
-body {width: 100%;}
+@media screen {
+width: 100%;
 }
-
-@media screen and (max-width:480px) {
-body {width:100%;} 
-
-}
-
 
