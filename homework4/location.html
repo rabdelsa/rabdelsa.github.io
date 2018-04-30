@@ -1,0 +1,109 @@
+<!DOCTYPE html >
+<html lang="en" >
+<head>
+
+  <meta charset="utf-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABC Toys Location</title>
+  <link href="style_location.css" rel="stylesheet" type="text/css" />
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA71O2K5pumXu-zsvl1RYCCBH2rVLgR9bc&callback=initMap"></script>
+  <script>
+    window.onload = getLocation;
+
+    /*
+    Here we will check the browser supports the Geolocation API; if exists, then we will display the location
+    */
+
+    var geo = navigator.geolocation;
+    function getLocation() {
+      if( geo ) {
+        geo.getCurrentPosition( displayLocation );
+        } else {
+        alert( "Oops, Geolocation API is not supported" );
+      }
+    }
+
+    /*
+    This function displays the latitude and longitude when the browser has a location.
+    */
+
+    function displayLocation( position ) {
+      var latitude = position.coords.latitude;
+      var longitude = position.coords.longitude;
+
+      var div = document.getElementById( 'location' );
+      div.innerHTML = "You are at Latitude: " + latitude + ", Longitude: " + longitude;
+
+    // Call showMap function once we've updated other div's on the page
+      displayMap( position.coords );
+    }
+
+
+    // Global Variable that will hold Google Map
+    var map;
+
+    /*
+    This method is used to display Google Map.
+    */
+
+    function displayMap( coords ) {
+      var googleLatAndLong = new google.maps.LatLng( coords.latitude, coords.longitude );
+
+      var mapOptions = {
+        center: googleLatAndLong,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+      };
+
+      var mapDiv = document.getElementById( 'map' );
+      map = new google.maps.Map( mapDiv, mapOptions );
+
+      /*
+      This method is used to display directions to toy store.
+      */
+
+      var directionsService = new google.maps.DirectionsService();
+      var directionsDisplay = new google.maps.DirectionsRenderer();
+        
+      directionsDisplay.setMap(map);
+      directionsDisplay.setPanel(document.getElementById('panel'));
+    
+      var request = {
+        origin: googleLatAndLong, 
+        destination: '37.765967,-122.449729',
+        travelMode: 'DRIVING'
+      };
+    
+      directionsService.route(request, function(response, status) {
+        if (status == google.maps.DirectionsStatus.OK) {
+          directionsDisplay.setDirections(response);
+        }
+      });
+
+      var title = 'Your Location';
+      var content = 'You are here: ' + coords.latitude + ', ' + coords.longitude;
+      addMarker( map, googleLatAndLong, title, content );
+    }
+
+</script>
+</head>
+<body>
+   <ul class ="navbar">
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="location.html">Location</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="offline.html">Offline Info</a></li>
+  </ul><br><br> 
+
+<h1>Come Visit Us!!!</h1><br>
+
+<h3>Directions To Our Store</h3><br>
+
+<div id="location" >
+You are at Latitude: _________, Longitude: _________
+</div>
+
+<div id="map" >
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <link rel="stylesheet" href="jquery-ui.min.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" href="style_products.css">
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+    $(document).ready(function() {
+      var icons = {
+        header: "ui-icon-info",
+        activeHeader: "ui-icon-notice"
+			};
+
+      $("#accordion").accordion({ 
+        icons: icons,
+        event: "click",
+        collapsible: true, 
+        active: false
+        });
+      });
+  </script>
+</head>
+<body> 
+  <ul class="navbar">
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="location.html">Location</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="offline.html">Offline Info</a></li>
+  </ul><br>
+
+ 
+  <main>  
+    <h1>Top 5 ABC Toys</h1>       
+    <div id="accordion"> 
+      <h3><a href="#">Star Wars Ultimate Co-Pilot Chewie</a></h3>
+    <div>
+      <img src="https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2018/02/19/105016053-STAR_WARS_ULTIMATE_CO-PILOT_CHEWIE_E0584_Cropped.720x405.jpg?v=1519059115" alt="Chewie Co-Pilot">
+      <p>In 2017, kids fell in love with Roarin' Tyler. This year, it'll be all about Co-Pilot Chewie.</p>
+      <p>Part of Hasbro's FurReal Friends line, this 16-inch Chewbacca toy has more than 100 motions and sounds, most notably his iconic Chewie roar.</p>
+      <p>In addition to Chewie, Hasbro debuted Ricky, the trick-loving pup. The toy retails for the same price as Chewbacca and can do a number of "tricks" including flipping a bone and shaking its paw.</p>
+    </div>
+      <h3><a href="#">Hot Wheels Augmoto Augmented Reality Racing</a></h3>
+    <div>
+      <img src="https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2018/02/19/105016046-AUGMOTO1-5-18_Cropped.720x405.png?v=1519058415" alt="Hot Wheels Racing Track">
+      <p>Hot Wheels Augmoto combines physical toy car racing with augmented reality.</p>
+      <p>Instead of controlling the cars, racers control the track using an app. There they can recharge their cars, speed through loops to collect power-ups to attack other players and put out fires if they've been hit by an opponent.</p>
+    </div>
+      <h3><a href="#">Nerf Prometheus</a></h3>
+    <div>
+      <img src="https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2018/02/19/105016043-NERF_Rival_Prometheus_Cropped.720x405.jpg?v=1519058350" alt="Nerf Gun Set">
+      <p>Nerf's newest line of toy weapons don't use traditional darts, it uses round ones.</p>
+      <p>The Rival series, which features toys that look more like paintball guns rather than traditional Nerf guns, is the brand's foray into more sophisticated and competition-ready toy guns.</p>
+      <p>The Prometheus holds a whopping 200 high-impact foam balls in an easy-to-load hopper. Motorized and rechargeable this battle behemoth can shoot eight rounds per second.</p>
+    </div>
+      <h3><a href="#">Kamigami Robots</a></h3>
+    <div>
+      <img src="https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2018/02/19/105016079-FWN69_Blue_angle1_color_Cropped.720x405.jpg?v=1519060871" alt="Kamigami Robots">
+      <p>Using the Kamigami build-it-yourself platform, kids can create a "Jurassic World" velociraptor.</p>
+      <p>Fold and snap the plastic shell over the animatronic dinosaur shell and use the adjoining app to code and customize the raptors movement, interactions, lights and sounds.</p>
+    </div>
+      <h3><a href="#">Think & Learn Rocktopus</a></h3>
+    <div>
+      <img src="https://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2018/02/19/105015996-Fisher-Price_Think__Learn_Rocktopus_FXW98_Cropped.720x405.jpg?v=1519054598" alt="Rocktopus">
+      <p>Mattel's Think & Learn Rocktopus brings math and music together for children between the ages of three and six.</p>
+      <p>Kids pop in music pods to create their own compositions or to learn simple addition and subtraction. The toy had five musical genres: pop, rock, funk and jazz, classical and world music.</p>
+    </div>
+    </div>
+  </main>
+</body>
+</html>

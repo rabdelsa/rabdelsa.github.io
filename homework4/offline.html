@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ABC Toys</title>
+  <link rel="stylesheet" href="style_index.css">
+</head>
+
+<body>
+   <ul class ="navbar">
+    <li><a class="active" href="index.html">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="location.html">Location</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+    <li><a href="offline.html">Offline Info</a></li>
+  </ul><br> 
+
+<h1>Offline</h1>
+<h3>What and How to Use Offline Technology</h3>
+  
+
+<p>The benefit of creating offline web apps is that it can continue to work in the face of intermittent network connectivity. Instead of displaying a blank screen, web apps can offer the header and content from a cache and then attempt to fetch content over the network. </p>
+<p>One solution is the Application Cache (appCache) which is part of the HTML5 specification. This technology allows a developer to specify which files the browser should cache and make available to offline users. The app will load and work correctly even if the user presses the refresh button while they're off line. To use the appCache. A simple text file called the cache manifest file is created and should list the resources the browsers will cache for offline access. Once the application is offline, it remains cached until either the user clears their browser's data storage for the site or the manifest file is modified.</p>
+<p>A more prudent alternative would be to use Service Workers which provide a way for webpages to run scripts in the background even when the page is not open. Unlike browser caches which can be easily overwritten, Service Workers allow the client full control and can make smarter decisions about what and when to cache. Once verified that this technology is supported, the registered Service Worker can store requests and responses while it also intercepts requests and serve up cached responses. The script should allow the browser to run in the background, separate from a web page, opening the door to features that don't need a web page or user interaction.</p>
+
+
+</body>
+
+</html>
